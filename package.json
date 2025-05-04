@@ -1,0 +1,26 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "KK react 2025",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Karunakar97/React-2025.git"
+  },
+  "author": "KK",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Karunakar97/React-2025/issues"
+  },
+  "homepage": "https://github.com/Karunakar97/React-2025#readme",
+  "devDependencies": {
+    "parcel": "^2.14.4"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "browsersList": ["last 8 versions"]
+}

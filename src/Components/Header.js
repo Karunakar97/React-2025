@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Grocery from "./Grocery";
 
 const Header = () => {
   return (
@@ -54,6 +55,9 @@ const Header = () => {
           </li>
           <li>
             <Link to={"/cart"}>Cart</Link>
+          </li>
+          <li>
+            <Link to={"/grocery"}>Grocery</Link>
           </li>
         </ul>
       </div>

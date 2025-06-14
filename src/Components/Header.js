@@ -1,7 +1,11 @@
 import { Link } from "react-router-dom";
 import Grocery from "./Grocery";
+import { useDispatch, useSelector } from "react-redux";
 
 const Header = () => {
+  const { cartState } = useSelector((state) => state.cart);
+  console.log(cartState, "cartState");
+
   return (
     <div
       className="header"
@@ -54,7 +58,7 @@ const Header = () => {
             <Link to={"/contact"}>Contact Us</Link>
           </li>
           <li>
-            <Link to={"/cart"}>Cart</Link>
+            <Link to={"/cart"}>Cart{cartState?.length}</Link>
           </li>
           <li>
             <Link to={"/grocery"}>Grocery</Link>

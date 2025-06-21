@@ -34,7 +34,6 @@ test("test should load two inputs", () => {
   render(<ContactUs />);
   // if multiple item getAllByRole
   const textBoxes = screen.getAllByRole("textbox");
-  console.log(textBoxes, "textBoxes");
   expect(textBoxes.length).toBe(2);
 });
 
@@ -57,7 +56,7 @@ describe("contact us test cases", () => {
     render(<ContactUs />);
     // if multiple item getAllByRole
     const textBoxes = screen.getAllByRole("textbox");
-    console.log(textBoxes, "textBoxes");
+    // console.log(textBoxes, "textBoxes");
     expect(textBoxes.length).toBe(2);
   });
 });
@@ -68,6 +67,5 @@ it("Should load two inputs", () => {
   render(<ContactUs />);
   // if multiple item getAllByRole
   const textBoxes = screen.getAllByRole("textbox");
-  console.log(textBoxes, "textBoxes");
   expect(textBoxes.length).toBe(2);
 });

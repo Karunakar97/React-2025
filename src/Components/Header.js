@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
 import Grocery from "./Grocery";
 import { useDispatch, useSelector } from "react-redux";
+import { useState } from "react";
 
 const Header = () => {
   const { cartState } = useSelector((state) => state.cart);
+  const [login, setLogin] = useState("Login");
   console.log(cartState, "cartState");
 
   return (
@@ -11,6 +13,7 @@ const Header = () => {
       className="header"
       style={{
         display: "flex",
+        flexDirection: "row",
         justifyContent: "space-between", // To align logo left and nav right
         alignItems: "center", // Center vertically
         padding: "0 20px", // Optional: for some padding on the sides
@@ -33,8 +36,10 @@ const Header = () => {
         className="nav-container"
         style={{
           display: "flex",
-          flexDirection: "column", // Make the list a column
+          flexDirection: "row",
+          justifyContent: "center",
           alignItems: "flex-end", // Align the list to the right
+          columnGap: 10,
         }}
       >
         <ul
@@ -58,12 +63,18 @@ const Header = () => {
             <Link to={"/contact"}>Contact Us</Link>
           </li>
           <li>
-            <Link to={"/cart"}>Cart{cartState?.length}</Link>
+            <Link to={"/cart"}>Cart {cartState?.length}</Link>
           </li>
           <li>
             <Link to={"/grocery"}>Grocery</Link>
           </li>
         </ul>
+        <button
+          name="login"
+          onClick={() => setLogin(login === "Login" ? "Logout" : "Login")}
+        >
+          {login}
+        </button>
       </div>
     </div>
   );
